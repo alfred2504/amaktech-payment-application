@@ -338,3 +338,19 @@ header p {
         margin: 10px 0;
     }
 }
+.cta-btn {
+    display: inline-block;
+    background-color: #27ae60;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #2ecc71;
+  }  
