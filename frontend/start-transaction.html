@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Transaction</title>
+    <link rel="stylesheet" href="/assets/styles.css"> <!-- Link to the same CSS file -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="/images/logo.png" alt="Logo Image">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Start Transaction Form Section -->
+    <section class="transaction-form">
+        <h2>Start a New Transaction</h2>
+        <form action="/process-transaction" method="POST">
+            <div class="form-group">
+                <label for="transaction-name">Transaction Name:</label>
+                <input type="text" id="transaction-name" name="transaction-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="transaction-amount">Transaction Amount:</label>
+                <input type="number" id="transaction-amount" name="transaction-amount" required>
+            </div>
+
+            <div class="form-group">
+                <label for="transaction-date">Transaction Date:</label>
+                <input type="date" id="transaction-date" name="transaction-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="transaction-type">Transaction Type:</label>
+                <select id="transaction-type" name="transaction-type" required>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="cta-btn">Submit Transaction</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Business Transaction Software. All Rights Reserved.</p>
+    </footer>
+
+    <script src="/script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
