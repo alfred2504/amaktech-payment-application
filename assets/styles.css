@@ -6,6 +6,19 @@ body {
     padding: 0;
 }
 
+/* Image Gallery styles */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.image-gallery img {
+    width: 30%; /* Adjust as needed for responsiveness */
+    margin: 0 10px;
+    border-radius: 5px; /* Rounded corners */
+}
+
 /* Header Styles */
 header {
     background-color: #007bff;
