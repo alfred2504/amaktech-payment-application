@@ -1,17 +1,11 @@
 {
-  "name": "business-transaction-backend",
+  "name": "amaktech-payment-application",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Business Transaction Software",
+  "main": "business-transactions-backend/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "nodemon business-transactions-backend/server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
@@ -21,5 +15,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
-  }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

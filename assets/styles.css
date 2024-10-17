@@ -16,7 +16,7 @@ header {
 header .logo img {
     width: 100px;
     text-align: center;
-    padding-left: 50%;
+    padding-left: 47%;
     margin-bottom: 30px;
 }
 
@@ -187,8 +187,8 @@ form label {
 
 form input {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
+    padding: 5px;
+    margin-top: 15px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }

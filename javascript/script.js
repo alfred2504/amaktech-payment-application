@@ -64,3 +64,50 @@ function viewVendors() {
         vendorTable.innerHTML += row;
     });
 }
+
+document.getElementById('signup-form').addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent form from submitting normally
+
+    // Get form data
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+    const responseDiv = document.getElementById('signup-response');
+
+    // Check if passwords match
+    if (password !== confirmPassword) {
+        responseDiv.innerText = 'Passwords do not match!';
+        return;
+    }
+
+    // Fetch the correct endpoint
+    fetch('/process-signup', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            username: username,
+            email: email,
+            password: password
+        })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.success) {
+            responseDiv.innerText = 'Sign up successful!';
+            window.location.href = 'login.html';
+        } else {
+            responseDiv.innerText = 'Sign up failed: ' + data.message;
+        }
+    })
+    .catch(error => {
+        responseDiv.innerText = 'An error occurred: ' + error.message;
+    });
+});
