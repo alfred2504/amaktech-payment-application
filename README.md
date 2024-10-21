@@ -1,66 +1,70 @@
-# Business Transaction Software
+# Getting Started with Create React App
 
-## Overview
-This project is a **Business Transaction Software** designed to streamline business processes, manage transactions, and monitor financial activities effectively. It features a user-friendly frontend for creating, managing, and tracking business transactions, with MySQL as the backend database and Node.js for server-side logic.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The software integrates authentication, customer/vendor management, inventory management, and reporting features. The frontend interacts with the backend through a RESTful API, providing seamless communication.
+## Available Scripts
 
----
+In the project directory, you can run:
 
-## Table of Contents
+### `npm start`
 
-- [Project Setup](#project-setup)
-- [Technologies Used](#technologies-used)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [Contributions](#contributions)
-- [License](#license)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
----
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Project Setup
+### `npm test`
 
-This software consists of a **frontend** built using HTML, CSS, and JavaScript, and a **backend** developed using Node.js and MySQL. The backend exposes APIs for managing user authentication and transactions, with MySQL used to store the data.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
----
+### `npm run build`
 
-## Technologies Used
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Frontend
-- HTML
-- CSS (Styled content section with responsive design)
-- JavaScript (For dynamic UI interactions)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Backend
-- **Node.js**: Handles server-side logic and API endpoints.
-- **Express.js**: Used for routing and middleware.
-- **MySQL**: Database used for storing transaction data.
-- **Nodemon**: For automatic server reloading during development.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
----
+### `npm run eject`
 
-## Features
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### Frontend:
-- **Landing Page**: A welcoming page with a banner and company logo.
-- **Sign-Up/Log-In**: A user authentication system allowing users to register and access their accounts.
-- **Transaction Dashboard**: An intuitive interface to create, update, and view transactions.
-- **Responsive Design**: Fully responsive layout for mobile and desktop devices.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### Backend:
-- **User Authentication**: Secure sign-up, login, and session management.
-- **Transaction Management**: Create, read, update, and delete transactions.
-- **API Endpoints**: RESTful API for interaction between the frontend and the backend.
-- **MySQL Database**: Stores user and transaction data.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
----
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Installation
+## Learn More
 
-### 1. Clone the repository:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```bash
-git clone https://github.com/alfred2504/business-transaction-software.git
-cd business-transaction-software
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
