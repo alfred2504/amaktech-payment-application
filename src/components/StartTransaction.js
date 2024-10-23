@@ -7,10 +7,10 @@ const StartTransaction = () => {
   const [transactionType, setTransactionType] = useState('income');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Prepare the transaction data
+    // Prepare the transaction data (can be stored or used for frontend operations)
     const transactionData = {
       name: transactionName,
       amount: parseFloat(transactionAmount),
@@ -18,32 +18,15 @@ const StartTransaction = () => {
       type: transactionType,
     };
 
-    // Send the data to the backend (replace '/api/transactions' with your actual endpoint)
-    try {
-      const response = await fetch('/api/transactions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(transactionData)
-      });
+    // For now, we just display the transaction data in the console
+    console.log("Transaction Submitted:", transactionData);
+    setMessage('Transaction submitted successfully!');
 
-      if (response.ok) {
-        const result = await response.json();
-        setMessage('Transaction submitted successfully!');
-        // Reset the form
-        setTransactionName('');
-        setTransactionAmount('');
-        setTransactionDate('');
-        setTransactionType('income');
-      } else {
-        const errorData = await response.json();
-        setMessage('Error: ' + (errorData.message || 'Failed to submit transaction.'));
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      setMessage('Error: Unable to submit transaction.');
-    }
+    // Reset the form after submission
+    setTransactionName('');
+    setTransactionAmount('');
+    setTransactionDate('');
+    setTransactionType('income');
   };
 
   return (
