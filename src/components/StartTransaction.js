@@ -36,7 +36,7 @@ const StartTransaction = () => {
   };
 
   return (
-    <div>
+    <div className="transaction-container">
       <h2>Start a New Transaction</h2>
       <form onSubmit={handleSubmit} className="transaction-form">
         <div className="form-group">
