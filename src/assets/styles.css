@@ -58,3 +58,7 @@ h2 {
 p {
   margin-top: 10px;
 }
+.transaction-success {
+  color: green;
+  font-weight: bold;
+}
