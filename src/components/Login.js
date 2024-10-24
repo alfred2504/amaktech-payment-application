@@ -9,7 +9,7 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     // Assuming validation passed, navigate to checkout after login
-    navigate('/checkout');
+    navigate('/start-transaction');
   };
 
   return (

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const StartTransaction = () => {
   const [transactionName, setTransactionName] = useState('');
@@ -6,11 +7,12 @@ const StartTransaction = () => {
   const [transactionDate, setTransactionDate] = useState('');
   const [transactionType, setTransactionType] = useState('income');
   const [message, setMessage] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Prepare the transaction data (can be stored or used for frontend operations)
+    // Prepare the transaction data
     const transactionData = {
       name: transactionName,
       amount: parseFloat(transactionAmount),
@@ -18,7 +20,6 @@ const StartTransaction = () => {
       type: transactionType,
     };
 
-    // For now, we just display the transaction data in the console
     console.log("Transaction Submitted:", transactionData);
     setMessage('Transaction submitted successfully!');
 
@@ -27,6 +28,11 @@ const StartTransaction = () => {
     setTransactionAmount('');
     setTransactionDate('');
     setTransactionType('income');
+  };
+
+  // Function to handle the navigation to the Checkout page
+  const handleCheckout = () => {
+    navigate('/checkout');
   };
 
   return (
@@ -78,7 +84,13 @@ const StartTransaction = () => {
 
         <button type="submit">Submit Transaction</button>
       </form>
+
       {message && <p>{message}</p>}
+
+      {/* Checkout Button to navigate to the Checkout page */}
+      <button onClick={handleCheckout} style={{ marginTop: '20px' }}>
+        Go to Checkout
+      </button>
     </div>
   );
 };
