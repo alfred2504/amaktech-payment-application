@@ -13,11 +13,11 @@ const HeroSection = () => {
                 <a href="signup" className="btn">Get Started</a>
             </div>
 
-            {/* Container for vertical images*/}
-            <div className="vertical-images">
-                <image src={computer} alt="Computer technology" />
-                <image src={greenICT} alt="Green ICT" initiative />
-                <image src={image} alt="Abstract design" />
+            {/* Container for horizontal images*/}
+            <div className="horizontal-images">
+                <img src={computer} alt="computer technology" />
+                <img src={greenICT} alt="Green ICT" initiative />
+                <img src={image} alt="Abstract design" />
             </div>
         </section>
     )

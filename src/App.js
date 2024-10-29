@@ -6,7 +6,7 @@ import Checkout from './components/Checkout';
 import StartTransaction from './components/StartTransaction';
 import LandingPage from './components/LandingPage';  // Importing the LandingPage component
 import './App.css';
-import './assets/styles.css';  // Importing the global styles
+import './assets/styles.css';
 
 const App = () => {
   return (
