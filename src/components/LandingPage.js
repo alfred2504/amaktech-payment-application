@@ -6,9 +6,9 @@ import Footer from './Footer';
 const LandingPage = () => {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <HeroSection />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
