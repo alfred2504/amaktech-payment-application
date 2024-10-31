@@ -4,38 +4,9 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-}
-
-/* Form styling */
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Button styling */
-button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Container styling */
@@ -58,19 +29,66 @@ h2 {
 p {
   margin-top: 10px;
 }
+
+/* Form styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Focus state for form inputs */
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Button styling */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #004085;
+}
+
+/* Transaction success message */
 .transaction-success {
   color: green;
   font-weight: bold;
 }
 
-/*Landing page header */
+/* Landing page header */
 .header {
   background-color: #007bff;
   color: white;
   padding: 15px;
   text-align: left;
-  margin-top: -1%;
 }
+
 .header h1 {
   margin: 0;
   font-size: 2em;
@@ -85,11 +103,17 @@ p {
   font-weight: bold;
   margin-left: 5%;
 }
-/*Hero section styles */
+
+/* Hero section styles */
 .hero {
   background-color: #f4f4f4;
   text-align: center;
-padding: 50px 20px;
+  padding: 50px 20px;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .hero-content h1 {
@@ -100,7 +124,7 @@ padding: 50px 20px;
 .hero-content p {
   font-size: 1.2em;
   color: #555;
-   margin: 10px 0;
+  margin: 10px 0;
 }
 
 .hero-content .btn {
@@ -113,11 +137,12 @@ padding: 50px 20px;
   transition: background-color 0.3s ease;
   line-height: 30px;
 }
+
 .hero-content .btn:hover {
   background-color: #0056b3;
 }
 
-/* horizontal images in hero section */
+/* Horizontal images in hero section */
 .horizontal-images {
   display: flex;
   flex-direction: row;
@@ -140,10 +165,30 @@ padding: 50px 20px;
   color: white;
   text-align: center;
   padding: 15px;
-  margin-top: 50px;
+  margin-top: auto; /* Ensures footer stays at the bottom */
 }
 
 .footer p {
   margin: 0;
   margin-top: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .signup-container,
+  .login-container,
+  .checkout-container,
+  .transaction-container {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .horizontal-images {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .horizontal-images img {
+    width: 100%;
+  }
 }
