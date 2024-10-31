@@ -18,7 +18,7 @@ const Checkout = () => {
           Transaction completed successfully!
         </p>
       ) : (
-        <button onClick={handleCompleteTransaction}>
+        <button onClick={handleCompleteTransaction} disabled={transactionCompleted}>
           Complete Transaction
         </button>
       )}
